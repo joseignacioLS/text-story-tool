@@ -1,0 +1,20 @@
+---
+import Story from "../components/Story";
+import { story } from "../stories/test";
+import "../global.scss";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Text Story</title>
+  </head>
+  <body>
+    <main>
+      <Story client:load story={story} />
+    </main>
+  </body>
+</html>

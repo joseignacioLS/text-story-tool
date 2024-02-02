@@ -1,0 +1,71 @@
+.story {
+  margin: auto;
+  width: 350px;
+  height: 100%;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  text-align: center;
+  white-space: balance;
+
+  background-color: rgb(31, 32, 37);
+
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.entry {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 100dvh;
+  overflow-y: hidden;
+  transition: max-height 0.2s;
+  & > p {
+    margin-bottom: 0.5rem;
+  }
+
+  &.collapsedEntry {
+    max-height: 0px;
+  }
+}
+
+.options {
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 0.25rem;
+  &:hover button {
+    opacity: 0.5;
+  }
+  button {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+    transition: opacity 0.2s;
+    background-color: lightgrey;
+    color: black;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.selected {
+      background-color: aquamarine;
+    }
+  }
+}
